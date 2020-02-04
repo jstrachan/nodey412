@@ -1,0 +1,119 @@
+
+Showing logs for build [32mjstrachan-nodey412-master-9wjpf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-8nvfw[0m
+{"level":"warn","ts":1580809192.1523266,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1580809192.1529164,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-nodey412-master-9wjpf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-6ms9m[0m
+{"level":"warn","ts":1580809193.1872225,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1580809193.1885238,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjstrachan-nodey412-master-9wjpf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-nodey412-master-9wjpf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jstrachan-nodey412-master-9wjpf-dgk49[0m
+{"level":"warn","ts":1580809200.2568343,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1580809201.4506068,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/nodey412.git @ v0.0.15 in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-nodey412-master-9wjpf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjstrachan-nodey412-master-9wjpf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mjstrachan-nodey412-master-9wjpf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mjstrachan-nodey412-master-9wjpf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.0 No repository field.
+npm WARN REPLACE_ME@1.0.0 No license field.
+
+up to date in 0.362s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mjstrachan-nodey412-master-9wjpf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> REPLACE_ME@1.0.0 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+
+Showing logs for build [32mjstrachan-nodey412-master-9wjpf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+ERROR: logging before flag.Parse: E0204 09:40:10.791877      11 metadata.go:241] Failed to unmarshal scopes: invalid character 'h' looking for beginning of value
+[36mINFO[0m[0001] Downloading base image node:9-slim           
+ERROR: logging before flag.Parse: E0204 09:40:10.804338      11 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0204 09:40:10.869292      11 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2020/02/04 09:40:10 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0002] Downloading base image node:9-slim           
+2020/02/04 09:40:12 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0003] Executing 0 build triggers                   
+[36mINFO[0m[0003] cmd: EXPOSE                                  
+[36mINFO[0m[0003] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0003] Using files from context: [/workspace/source] 
+[36mINFO[0m[0003] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0003] Taking snapshot of full filesystem...        
+[36mINFO[0m[0003] ENV PORT 8080                                
+[36mINFO[0m[0003] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0003] EXPOSE 8080                                  
+[36mINFO[0m[0003] cmd: EXPOSE                                  
+[36mINFO[0m[0003] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0003] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0003] WORKDIR /usr/src/app                         
+[36mINFO[0m[0003] cmd: workdir                                 
+[36mINFO[0m[0003] Changed working directory to /usr/src/app    
+[36mINFO[0m[0003] Creating directory /usr/src/app              
+[36mINFO[0m[0003] Taking snapshot of files...                  
+[36mINFO[0m[0003] Using files from context: [/workspace/source] 
+[36mINFO[0m[0003] COPY . .                                     
+[36mINFO[0m[0003] Taking snapshot of files...                  
+[36mINFO[0m[0003] CMD ["npm", "start"]                         
+[36mINFO[0m[0003] No files changed in this command, skipping snapshotting. 
+2020/02/04 09:40:13 existing blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2020/02/04 09:40:13 existing blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2020/02/04 09:40:13 existing blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2020/02/04 09:40:13 existing blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2020/02/04 09:40:13 existing blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2020/02/04 09:40:16 pushed blob: sha256:93c23b2dab6ec54f9e44c014e6ab5211ac223ab182228a3b50bb0ab4ca3debb5
+2020/02/04 09:40:16 pushed blob: sha256:cc2bee6b5501c8f6d0eda97588f243f55de5b1aec4c2e74583c914b32138718c
+2020/02/04 09:40:16 pushed blob: sha256:d1e79f3009958c82e623a3ca00b5bdedd4dd8a8cf912f0f8be4ed1150cd971ef
+2020/02/04 09:40:18 gcr.io/*********-multicluster/nodey412:0.0.15: digest: sha256:c69033acc4c4fbca77ddb8f5dca7337353d0e15f98b98151afcd2f67827019f3 size: 1404
+
+Showing logs for build [32mjstrachan-nodey412-master-9wjpf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mjstrachan-nodey412-master-9wjpf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/nodey412 to an unshallow repository
+Generating change log from git ref 23eb03fb026bdf0a88db0d6c5926d3b0e9986766 => e6b1af468b5311af338227e4089e9b7a0a19046c
+WARNING: No release found for *********/nodey412 and tag v0.0.15 so creating a new release
+Updated the release information at https://github.com/*********/nodey412/releases/tag/v0.0.15
+generated: /workspace/source/charts/nodey412/templates/release.yaml
+Created Release nodey412-0-0-15 resource in namespace **
+Updating PipelineActivity *********-nodey412-master-13 with version 0.0.15
+Updated PipelineActivities *********-nodey412-master-13 with release notes URL: https://github.com/*********/nodey412/releases/tag/v0.0.15
+
+Showing logs for build [32mjstrachan-nodey412-master-9wjpf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file nodey412-0.0.15.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mjstrachan-nodey412-master-9wjpf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app nodey412 version 0.0.15 to namespace **-staging
+WARNING: 
+Created Pull Request: https://github.com/*********/environment-dev-helmfile-local-staging/pull/10
+Added label updatebot to Pull Request https://github.com/*********/environment-dev-helmfile-local-staging/pull/10
+WARNING: Failed to query the Pull Request last commit status for https://github.com/*********/environment-dev-helmfile-local-staging/pull/10 ref 79bfd78e51f41ba7e7180f0b9ae6a7cca6c4188d Could not find a status for repository *********/environment-dev-helmfile-local-staging with ref 79bfd78e51f41ba7e7180f0b9ae6a7cca6c4188d
+got git provider status pending from PR https://github.com/*********/environment-dev-helmfile-local-staging/pull/10
+got git provider status pending from PR https://github.com/*********/environment-dev-helmfile-local-staging/pull/10
+error: Pull request https://github.com/*********/environment-dev-helmfile-local-staging/pull/10 last commit has status failure for ref 79bfd78e51f41ba7e7180f0b9ae6a7cca6c4188d
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-jx-promote'. The execution of the pipeline has stopped.[0m
