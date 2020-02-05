@@ -21,6 +21,6 @@ image:
     
 preview:
   image:
-    repository:
-    tag:
+    repository: gcr.io/jstrachan-multicluster/nodey412
+    tag: 0.0.0-SNAPSHOT-PR-4-2
     pullPolicy: IfNotPresent
