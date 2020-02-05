@@ -15,6 +15,10 @@ cleanup:
     helm.sh/hook: pre-delete
     helm.sh/hook-delete-policy: hook-succeeded
 
+image:
+  repository: gcr.io/jstrachan-multicluster/nodey412
+  tag: 0.0.0-SNAPSHOT-PR-4-1
+    
 preview:
   image:
     repository:
